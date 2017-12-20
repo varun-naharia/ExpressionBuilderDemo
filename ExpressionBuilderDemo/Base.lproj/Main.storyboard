@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,120 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExpressionBuilderDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FF7-ve-9dJ" customClass="VNExpressionBuilder" customModule="ExpressionBuilderDemo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="343" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="NdG-AS-0Td"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5Q-E4-AfT">
+                                <rect key="frame" x="23" y="178" width="160" height="30"/>
+                                <color key="backgroundColor" red="0.38686810659999998" green="0.68061906400000005" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ie2-g6-Bkl"/>
+                                </constraints>
+                                <state key="normal" title="Function">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="functionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8s-d1-jlM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEo-6o-t5c">
+                                <rect key="frame" x="191" y="178" width="160" height="30"/>
+                                <color key="backgroundColor" red="0.99948590993881226" green="0.12109584361314774" blue="0.0030506628099828959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Expression">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="expressionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yNX-gM-5FT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdk-Kr-GC4">
+                                <rect key="frame" x="23" y="216" width="328" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6cd-Qu-9Yy"/>
+                                </constraints>
+                                <state key="normal" title="Evaluate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="evaluateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWm-LI-HSb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRn-fO-aSC">
+                                <rect key="frame" x="23" y="254" width="328" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="CLP-Ye-ZXv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.85742187503333334" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f5Q-E4-AfT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="4GH-b2-00F"/>
+                            <constraint firstItem="jdk-Kr-GC4" firstAttribute="top" secondItem="f5Q-E4-AfT" secondAttribute="bottom" constant="8" symbolic="YES" id="6Gt-Ac-qsY"/>
+                            <constraint firstItem="FF7-ve-9dJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AaU-p8-h7w"/>
+                            <constraint firstItem="jdk-Kr-GC4" firstAttribute="trailing" secondItem="oRn-fO-aSC" secondAttribute="trailing" id="D6W-aY-SHU"/>
+                            <constraint firstItem="jdk-Kr-GC4" firstAttribute="leading" secondItem="oRn-fO-aSC" secondAttribute="leading" id="EGt-Kt-Z41"/>
+                            <constraint firstItem="YEo-6o-t5c" firstAttribute="leading" secondItem="f5Q-E4-AfT" secondAttribute="trailing" constant="8" symbolic="YES" id="Gbp-9d-jpU"/>
+                            <constraint firstItem="f5Q-E4-AfT" firstAttribute="width" secondItem="YEo-6o-t5c" secondAttribute="width" id="Jio-u2-a6s"/>
+                            <constraint firstItem="FF7-ve-9dJ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PKp-cA-79W"/>
+                            <constraint firstItem="jdk-Kr-GC4" firstAttribute="trailing" secondItem="YEo-6o-t5c" secondAttribute="trailing" id="Vfm-bE-nR3"/>
+                            <constraint firstItem="f5Q-E4-AfT" firstAttribute="top" secondItem="FF7-ve-9dJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Vqe-DL-PD9"/>
+                            <constraint firstItem="oRn-fO-aSC" firstAttribute="top" secondItem="jdk-Kr-GC4" secondAttribute="bottom" constant="8" symbolic="YES" id="WtD-aL-9Zg"/>
+                            <constraint firstItem="FF7-ve-9dJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZWk-4q-Sbd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YEo-6o-t5c" secondAttribute="trailing" constant="24" id="ohy-9e-PiA"/>
+                            <constraint firstItem="jdk-Kr-GC4" firstAttribute="leading" secondItem="f5Q-E4-AfT" secondAttribute="leading" id="scY-hP-g6u"/>
+                            <constraint firstItem="f5Q-E4-AfT" firstAttribute="baseline" secondItem="YEo-6o-t5c" secondAttribute="baseline" id="xkV-Ii-0ZT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="expressionBuilderView" destination="FF7-ve-9dJ" id="UZh-78-EPz"/>
+                        <outlet property="lblValue" destination="oRn-fO-aSC" id="4ts-g3-wSe"/>
+                        <outlet property="picker" destination="Rzf-Dx-PsI" id="tPd-yZ-WXI"/>
+                        <outlet property="toolbar" destination="dhR-h4-eGr" id="ken-gv-7aj"/>
+                        <outlet property="toolbarTitle" destination="IBy-d4-ebU" id="SMs-Jx-u4f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="Rzf-Dx-PsI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                </pickerView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dhR-h4-eGr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Cancel" id="L1u-mX-8Gb">
+                            <connections>
+                                <action selector="cancelAction:" destination="BYZ-38-t0r" id="zl1-Ox-Cbd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Tst-lX-6P3"/>
+                        <barButtonItem title="Title" width="100.66666412353516" id="IBy-d4-ebU">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="sJ3-qE-k1q"/>
+                        <barButtonItem title="Done" id="7Xb-mt-Otl">
+                            <connections>
+                                <action selector="doneAction:" destination="BYZ-38-t0r" id="D0K-pF-v7C"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>

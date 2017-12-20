@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABAA17E21FE2968900A1595E /* VNMathFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17E11FE2968900A1595E /* VNMathFunctions.swift */; };
 		ABAE56701FDF9C550066052B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE566F1FDF9C550066052B /* AppDelegate.swift */; };
 		ABAE56721FDF9C560066052B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE56711FDF9C560066052B /* ViewController.swift */; };
 		ABAE56751FDF9C560066052B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAE56731FDF9C560066052B /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		ABAE567A1FDF9C560066052B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAE56781FDF9C560066052B /* LaunchScreen.storyboard */; };
 		ABAE56851FDF9C570066052B /* ExpressionBuilderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE56841FDF9C570066052B /* ExpressionBuilderDemoTests.swift */; };
 		ABAE56901FDF9C570066052B /* ExpressionBuilderDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE568F1FDF9C570066052B /* ExpressionBuilderDemoUITests.swift */; };
+		ABAE569F1FDF9CF50066052B /* VNExpressionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE569E1FDF9CF50066052B /* VNExpressionBuilder.swift */; };
+		ABAE56A11FDF9D150066052B /* VNExpressionBuilder.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAE56A01FDF9D150066052B /* VNExpressionBuilder.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABAA17E11FE2968900A1595E /* VNMathFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNMathFunctions.swift; sourceTree = "<group>"; };
 		ABAE566C1FDF9C550066052B /* ExpressionBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressionBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAE566F1FDF9C550066052B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABAE56711FDF9C560066052B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 		ABAE568B1FDF9C570066052B /* ExpressionBuilderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpressionBuilderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAE568F1FDF9C570066052B /* ExpressionBuilderDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressionBuilderDemoUITests.swift; sourceTree = "<group>"; };
 		ABAE56911FDF9C570066052B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABAE569E1FDF9CF50066052B /* VNExpressionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNExpressionBuilder.swift; sourceTree = "<group>"; };
+		ABAE56A01FDF9D150066052B /* VNExpressionBuilder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VNExpressionBuilder.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		ABAE566E1FDF9C550066052B /* ExpressionBuilderDemo */ = {
 			isa = PBXGroup;
 			children = (
+				ABAE569D1FDF9C770066052B /* VNExpressionBuilder */,
 				ABAE566F1FDF9C550066052B /* AppDelegate.swift */,
 				ABAE56711FDF9C560066052B /* ViewController.swift */,
 				ABAE56731FDF9C560066052B /* Main.storyboard */,
@@ -123,6 +130,16 @@
 				ABAE56911FDF9C570066052B /* Info.plist */,
 			);
 			path = ExpressionBuilderDemoUITests;
+			sourceTree = "<group>";
+		};
+		ABAE569D1FDF9C770066052B /* VNExpressionBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				ABAE569E1FDF9CF50066052B /* VNExpressionBuilder.swift */,
+				ABAE56A01FDF9D150066052B /* VNExpressionBuilder.xib */,
+				ABAA17E11FE2968900A1595E /* VNMathFunctions.swift */,
+			);
+			path = VNExpressionBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAE567A1FDF9C560066052B /* LaunchScreen.storyboard in Resources */,
+				ABAE56A11FDF9D150066052B /* VNExpressionBuilder.xib in Resources */,
 				ABAE56771FDF9C560066052B /* Assets.xcassets in Resources */,
 				ABAE56751FDF9C560066052B /* Main.storyboard in Resources */,
 			);
@@ -259,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAE569F1FDF9CF50066052B /* VNExpressionBuilder.swift in Sources */,
+				ABAA17E21FE2968900A1595E /* VNMathFunctions.swift in Sources */,
 				ABAE56721FDF9C560066052B /* ViewController.swift in Sources */,
 				ABAE56701FDF9C550066052B /* AppDelegate.swift in Sources */,
 			);
